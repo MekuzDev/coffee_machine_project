@@ -44,7 +44,7 @@ while not program_ended:
             total = process_coin()
             if total >= MENU[menu_item]['cost']:
                 for i in recipe:
-                    resources[i] = resources[i] - recipe[i]
+                    resources[i] -= recipe[i]
                 change = total - MENU[menu_item]['cost']
                 money += MENU[menu_item]['cost']
                 print(f'you have ${round(change,2)} in change')
